@@ -22,9 +22,12 @@ RUN rustup --version; \
     cargo --version; \
     rustc --version;
 
+ENV MACOSX_DEPLOYMENT_TARGET="10.7"
+
 # These tell the CC crate the correct cc and ar to use when cross compiling
-ENV CC_x86_64_apple_darwin=/usr/osxcross/bin/x86_64-apple-darwin14-clang
-ENV AR_x86_64_apple_darwin=/usr/osxcross/bin/x86_64-apple-darwin14-ar
+ENV PATH=/usr/osxcross/bin:$PATH
+ENV CC_x86_64_apple_darwin=x86_64-apple-darwin14-clang
+ENV AR_x86_64_apple_darwin=x86_64-apple-darwin14-ar
 ENV CC_x86_64_pc_windows_gnu=x86_64-w64-mingw32-gcc
 ENV AR_x86_64_pc_windows_gnu=x86_64-w64-mingw32-gcc-ar
 
