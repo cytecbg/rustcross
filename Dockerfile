@@ -31,4 +31,4 @@ ENV AR_x86_64_apple_darwin=x86_64-apple-darwin14-ar
 ENV CC_x86_64_pc_windows_gnu=x86_64-w64-mingw32-gcc
 ENV AR_x86_64_pc_windows_gnu=x86_64-w64-mingw32-gcc-ar
 
-CMD /bin/bash
+ENTRYPOINT []
